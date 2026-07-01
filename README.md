@@ -22,6 +22,7 @@ If you are cloning this repository to review my projects locally, you can switch
 ### 1. Clone the repository
 ```bash
 git clone [https://github.com/Makundi/Data-Analytic-Programme-ALX.git](https://github.com/Makundi/Data-Analytic-Programme-ALX.git)
+
 cd Data-Analytic-Programme-ALX
 ```
 
