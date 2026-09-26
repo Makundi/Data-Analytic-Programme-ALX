@@ -10,7 +10,7 @@ All raw datasets, data dictionaries, and processed files for this module are sto
 
 | Asset / File | Description | Link |
 | :--- | :--- | :--- |
-| **Data Folder** | Primary directory for Module 1 exercises | [`/Preparing_Data_For_Analysis/Data`](./Preparing_Data_For_Analysis/) |
+| **Data Folder** | Primary directory for Module 1 exercises | [`/Preparing_Data_For_Analysis/Data`](./Preparing_Data_For_Analysis/Data/) |
 | **Raw Dataset** | Uncleaned baseline dataset used for EDA | [`raw_data.xlsx`](./Preparing_Data_For_Analysis/Data/Using_data_in_spreadsheets_student.xlsx) |
 | **Cleaned Dataset** | Final normalized and validated data | [`cleaned_data.xlsx`](./Preparing_Data_For_Analysis/Data/Using_data_in_spreadsheets_clean.xlsx) |
 | **Google Sheet** | Interactive cloud version with formulas | [View Live Sheet ↗](https://docs.google.com/spreadsheets/d/1sXOFahQUdCh37vfwyvQJCK2ChZWkYDzLxr6cYMguSiM/edit?usp=sharing) |
