@@ -58,10 +58,8 @@ Describes how spread out or dispersed data points are relative to each other and
 
 ## 2. Data Visualization & Chart Selection
 
-### 🔗 Project Links & Worksheets
-* 📊 [Data Visualization](https://docs.google.com/spreadsheets/d/1QnLwFy-Il4SkyaL1TB_qz2ZMBqvZYTlx/edit?usp=sharing&ouid=115371234275515848882&rtpof=true&sd=true)
-
 Choosing the correct visualization begins by answering one core question: **"What would you like to show?"** Chart selection is organized into four main categories Comparison, Relationship, Distribution and Composition.
+
 
 ### 📊 Comparison
 Used to compare values across items or track trends over time.
@@ -97,6 +95,9 @@ Used to display how individual parts make up a whole, either statically or dynam
   * *Few Periods (Relative & absolute differences):* Stacked bar chart.
   * *Many Periods (Relative differences only):* Stacked 100% area chart.
   * *Many Periods (Relative & absolute differences):* Stacked area chart.
+
+  ### 🔗 Project Links & Worksheets
+* 📊 [Data Visualization](https://docs.google.com/spreadsheets/d/1QnLwFy-Il4SkyaL1TB_qz2ZMBqvZYTlx/edit?usp=sharing&ouid=115371234275515848882&rtpof=true&sd=true)
 
 ---
 
