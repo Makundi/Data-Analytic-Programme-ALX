@@ -61,15 +61,7 @@ Describes how spread out or dispersed data points are relative to each other and
 ### 🔗 Project Links & Worksheets
 * 📊 [Data Visualization](https://docs.google.com/spreadsheets/d/1QnLwFy-Il4SkyaL1TB_qz2ZMBqvZYTlx/edit?usp=sharing&ouid=115371234275515848882&rtpof=true&sd=true)
 
-Choosing the correct visualization begins by answering one core question: **"What would you like to show?"** Chart selection is organized into four main categories:
-
-                 ┌───────────────────────────┐
-                 │ What would you like to    │
-                 │          show?            │
-                 └─────────────┬─────────────┘
-      ┌────────────────┬───────┴───────┬────────────────┐
-      ▼                ▼               ▼                ▼
-Comparison       Relationship     Distribution     Composition
+Choosing the correct visualization begins by answering one core question: **"What would you like to show?"** Chart selection is organized into four main categories Comparison, Relationship, Distribution and Composition.
 
 ### 📊 Comparison
 Used to compare values across items or track trends over time.
