@@ -11,7 +11,7 @@ Use the dashboard below to navigate through the different courses and view my lo
 | Course Module | Focus Area | Status | Explore Branch |
 | :--- | :--- | :--- | :--- |
 | **01: Data & AI Literacy** | Core Frameworks (EGAD, 5W2H, MECE), AI Ethics, Big Data Foundations | ✅ Completed | [View Branch ↗](https://github.com/Makundi/Data-Analytic-Programme-ALX/tree/course/01-data-ai-literacy) |
-| **02: Data Analytics with Spreadsheets** |  | ⏳ Up Next | [View Branch ↗](https://github.com/Makundi/Data-Analytic-Programme-ALX/tree/course/02-data-analytics-with-spreadsheets) |
+| **02: Data Analytics with Spreadsheets** |  | ✅ Completed | [View Branch ↗](https://github.com/Makundi/Data-Analytic-Programme-ALX/tree/course/02-data-analytics-with-spreadsheets) |
 
 ---
 
