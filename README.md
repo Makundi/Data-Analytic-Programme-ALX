@@ -105,3 +105,35 @@ Used to display how individual parts make up a whole, either statically or dynam
 * **Avoiding Skewed Interpretations:** Knowing to report the median and IQR instead of the mean when data contains severe outliers.
 * **Assessing Data Reliability:** Combining central tendency with standard deviation to determine how closely individual data points cluster around the average.
 * **Purpose-Driven Charting:** Selecting chart types based on category counts, period density, and the core analytical goal (Comparison, Relationship, Distribution, or Composition) to prevent misleading stakeholders.
+
+---
+
+# Module 3: Data Cleaning and Integrity
+
+This module covers the core principles of data quality and validation. Ensuring data integrity requires systematically auditing datasets to verify they are accurate, complete, consistent, and reliable before conducting any analysis.
+
+### 🔗 Module Worksheets & Resources
+* [Data Cleaning & Quality Audit Practise Exercise Dataset](https://docs.google.com/spreadsheets/d/1s5lEfHyw_27LkvyY6Ym1OWyA43Jq76Xor5uqImEE8rg/edit?usp=sharing)
+* [Data Cleaning & Quality Audit Practise Exercise solution](https://docs.google.com/spreadsheets/d/1k8ZzPrtL_NnOz0qijDYxBXM8nLHh8D98YUIjkiiAVKA/edit?usp=sharing)
+
+---
+
+## 1. Data Quality Audit Framework
+
+The data quality checklist identifies five major categories of data issues, along with critical nuances to monitor and potential solutions for resolving them:
+
+| Data Quality Issue | Description | Key Nuance to Watch For | Potential Solutions |
+| :--- | :--- | :--- | :--- |
+| **Missing Data** | Nulls, blank cells, or `NaN` (unrepresentable values). | Watch out for **informative missing values**. | • Drop observations or features containing missing data.<br>• Fill values using appropriate imputation estimates.<br>• Flag missing entries with a uniform placeholder value. |
+| **Duplicate Observations** | Repeated entries, including exact duplicates and near-duplicates. | Watch out for **seemingly duplicate values** that are legitimate distinct records. | • Remove duplicates while retaining a single occurrence.<br>• Merge duplicate observations together. |
+| **Unwanted Outliers** | Values that differ significantly from the rest of the dataset. | Watch out for **useful outliers** that reveal critical domain insights. | • Identify outliers via data plotting, statistical metrics, or domain knowledge.<br>• Delete outlier observations.<br>• Replace outliers with more representative values. |
+| **Irrelevant Observations** | Data points or variables that do not contribute to the specific analysis. | Watch out for **data interdependency** across variables. | • Retain data to provide contextual storytelling without including it in calculations.<br>• Delete irrelevant rows, columns, or values. |
+| **Structural Issues** | Inconsistencies, typos, mixed date formats, or unit errors within the data. | Watch out for **data type mismatches** (e.g., text currency symbols like `$`). | • Validate data entries and run spell checks to fix typos.<br>• Standardize text case, naming conventions, measurements, and date formats.<br>• Convert fields to correct file formats and data types. |
+
+---
+
+## 2. Core Applied Principles
+
+* **Context-Aware Cleaning:** Recognizing that not all missing or extreme values should be blindly deleted. Some missing entries carry functional meaning, and certain outliers reflect real-world business events.
+* **Standardization First:** Converting unformatted text, mixed date representations (e.g., `2/15/2022` vs `2022-02-15`), and currency symbols into strict, uniform data types prevents formula errors downstream.
+* **Audit Trail Accountability:** Documenting every deletion, imputation, and structural transformation to maintain full data lineage and reproducibility.
