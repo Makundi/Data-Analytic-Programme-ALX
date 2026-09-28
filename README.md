@@ -170,7 +170,7 @@ Probability measures the chance of an event occurring, expressed on a scale from
 There are three primary methods used to calculate probability:
 
 1. **Subjective Probability:** Based on individual perspective, personal experience, or domain intuition (e.g., estimating a 75% chance of market growth). It is the easiest to implement but the least reliable.
-2. **Empirical Probability:** Derived by conducting an experiment over a large number of trials ($N$) and counting how many times the target event occurs ($N(A)$). Calculated as:
+2. **Empirical Probability:** Derived by conducting an experiment over a large number of trials ($N$) and counting how many times the target event occurs $N(A)$. Calculated as:
    $$P(A) = \frac{N(A)}{N}$$
    This is the most commonly used empirical approach.
 3. **Axiomatic Probability:** Built on the assumption that all possible outcomes in a sample space are equally likely (e.g., rolling a fair six-sided die yielding $P(X) = \frac{1}{6}$ for any face).
