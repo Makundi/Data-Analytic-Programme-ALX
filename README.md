@@ -137,3 +137,73 @@ The data quality checklist identifies five major categories of data issues, alon
 * **Context-Aware Cleaning:** Recognizing that not all missing or extreme values should be blindly deleted. Some missing entries carry functional meaning, and certain outliers reflect real-world business events.
 * **Standardization First:** Converting unformatted text, mixed date representations (e.g., `2/15/2022` vs `2022-02-15`), and currency symbols into strict, uniform data types prevents formula errors downstream.
 * **Audit Trail Accountability:** Documenting every deletion, imputation, and structural transformation to maintain full data lineage and reproducibility.
+
+---
+
+# Module 4: Spreadsheet Functions and Distributions
+
+## Part 1: Samples and Distributions
+
+This section covers the foundational statistical principles required to make data-driven inferences about broader populations using sample data, probability calculations, and probability distributions.
+
+---
+
+### 1. Samples, Populations, and Inferential Statistics
+
+* **Population vs. Sample:** A **population** represents the complete collection of all items or individuals of interest. A **sample** is any subset of items selected from that population.
+* **Inferential Statistics:** Used to draw conclusions and make predictions about an entire population based on findings from a representative random sample.
+* **Role of Probability:** Probability theory provides the mathematical framework for inferential statistics by quantifying the likelihood of various sample outcomes.
+
+#### Sample Size Trade-Offs
+
+| Sample Type | Characteristics & Advantages | Trade-Offs |
+| :--- | :--- | :--- |
+| **Large Sample** *(Preferred)* | • Produces more accurate population estimates.<br>• Increases statistical power. | Requires significantly more resources, time, and data collection effort. |
+| **Small Sample** | • Cost-effective, time-efficient, and easy to manage. | Decreases estimation accuracy and increases sampling risk. |
+
+---
+
+### 2. Probability and Calculation Approaches
+
+Probability measures the chance of an event occurring, expressed on a scale from $0$ (event will definitely not occur) to $1$ (event will definitely occur).
+
+There are three primary methods used to calculate probability:
+
+1. **Subjective Probability:** Based on individual perspective, personal experience, or domain intuition (e.g., estimating a 75% chance of market growth). It is the easiest to implement but the least reliable.
+2. **Empirical Probability:** Derived by conducting an experiment over a large number of trials ($N$) and counting how many times the target event occurs ($N(A)$). Calculated as:
+   $$P(A) = \frac{N(A)}{N}$$
+   This is the most commonly used empirical approach.
+3. **Axiomatic Probability:** Built on the assumption that all possible outcomes in a sample space are equally likely (e.g., rolling a fair six-sided die yielding $P(X) = \frac{1}{6}$ for any face).
+
+---
+
+### 3. Random Variables & Probability Distributions
+
+A **random variable** is a variable whose value is numerical and determined by chance through a random process.
+
+#### Discrete vs. Continuous Random Variables
+
+* **Discrete Random Variables:** Consist of distinct, countable whole numbers (e.g., number of sales transactions, number of voters).
+  * **Probability Mass Function (PMF):** The probability distribution for discrete variables, expressed as $f(x) = P(X = x)$ in tables or equations. It gives exact point probabilities for individual outcomes.
+* **Continuous Random Variables:** Represent measurements that can take any value across a continuous numerical interval (e.g., height, weight, response time).
+  * **Probability Density Function (PDF):** The probability distribution for continuous variables. The probability over an interval $P(a < X < b)$ corresponds to the area under the curve $f(x)$ over that range.
+  * *Key Continuous Property:* For any exact single point $k$ in a continuous distribution, $P(X = k) = 0$.
+
+---
+
+### 4. The Normal Distribution
+
+The **Normal (Gaussian) Distribution** is a symmetric, bell-curved continuous probability density function used to model many real-world phenomena (e.g., student test scores, heights, physical measurements).
+
+* **Mathematical Notation:** $X \sim N(\mu, \sigma^2)$
+* **Center ($\mu$):** The population mean, which locates the center peak of the symmetric curve.
+* **Spread ($\sigma$):** The standard deviation, which determines the width and spread of the distribution around the center.
+* **Example:** A population of student heights with a mean of $170\text{ cm}$ and standard deviation of $9\text{ cm}$ is written as $X \sim N(170, 81)$.
+
+---
+
+### 5. Key Applied Takeaways
+
+* **Sampling Trade-Offs:** Balancing resource constraints against accuracy requirements when deciding on sample sizes for analysis.
+* **Distribution Matching:** Applying Probability Mass Functions (PMF) when counting discrete event occurrences and Probability Density Functions (PDF) when measuring continuous variables over ranges.
+* **Normal Curve Modeling:** Utilizing the mean ($\mu$) and variance ($\sigma^2$) parameters to model real-world continuous data distributions for predictive analysis.
