@@ -257,3 +257,50 @@ Used to locate the starting character index of a substring within a larger text 
 ### 4. Key Applied Takeaways
 * **Automated Text Hygiene:** Combining `TRIM` and `CLEAN` with case functions (`UPPER`, `LOWER`, `PROPER`) eliminates hidden whitespace, line breaks, and inconsistent casing that break lookup formulas and pivot tables.
 * **Case-Aware Parsing:** Knowing when to choose `SEARCH` for flexible, case-insensitive substring matching versus `FIND` when exact capitalization must be enforced.
+
+---
+
+# Module 5: Statistical Reasoning and Hypothesis Testing
+
+This module covers identifying relationships between variables through linear regression, evaluating predictive model accuracy, and conducting statistical hypothesis testing in spreadsheets.
+
+### 🔗 Module Worksheets & Resources
+* 📊 [Hypothesis Testing & Regression Analysis Workbook](https://docs.google.com/spreadsheets/d/1s7eO5gDqg5Q7tn-QGXt17kULqF7T6PcC/edit?usp=sharing&ouid=115371234275515848882&rtpof=true&sd=true)
+
+---
+
+## 1. Identifying Patterns & Linear Regression
+Linear regression models the relationship between an **independent variable ($x$)** and a **dependent variable ($y$)** using a straight **line of best fit** ($y = mx + c$):
+
+* **Slope ($m$):** Indicates the direction (positive or negative) and rate of change in $y$ per unit change in $x$.
+* **Y-Intercept ($c$):** The predicted baseline value of $y$ when $x = 0$.
+* **Correlation:** Quantifies the strength and direction of a linear relationship between $-1$ and $+1$ using `=CORREL(data_y, data_x)`.
+* **R-Squared ($R^2$):** Measures goodness of fit (proportion of variance in $y$ explained by $x$) via $R^2 = 1 - \frac{RSS}{TSS}$, calculated using `=RSQ(data_y, data_x)`.
+* **Heatmaps:** Color-coded matrices used to visually distinguish linear relationships (gradual color shifts) from non-linear patterns (random color distributions) across multiple variables.
+
+---
+
+## 2. Evaluating Model Accuracy
+A **residual** is the difference between an observed value and a predicted value. Reliable models produce residuals randomly scattered around zero with constant spread (**homoskedasticity**), rather than fan/cone shapes (**heteroskedasticity**) or clear trends.
+
+| Error Metric | Description | Formula |
+| :--- | :--- | :--- |
+| **Mean Absolute Error (MAE)** | Average of the absolute residual values. | $MAE = \sum_{i=1}^{n} \frac{|y_i - x_i|}{n}$ |
+| **Mean Squared Error (MSE)** | Average of the squared residual values. | $MSE = \sum_{i=1}^{n} \frac{(y_i - x_i)^2}{n}$ |
+| **Root Mean Squared Error (RMSE)** | Square root of MSE, returning error to original units. | $RMSE = \sqrt{\sum_{i=1}^{n} \frac{(y_i - x_i)^2}{n}}$ |
+
+* **Bias vs. Variance Trade-Off:** High **bias** oversimplifies patterns and causes **underfitting**, while high **variance** memorizes noise in training data and causes **overfitting**. Polynomial trend lines ($y = \beta_0 + \beta_1x + \dots + \beta_nx^n$) add flexibility to capture non-linear curves.
+
+---
+
+## 3. Hypothesis Testing & Statistical Significance
+Hypothesis testing evaluates whether sample findings reflect a true effect (**Alternative Hypothesis, $H_A$**) or occurred by chance (**Null Hypothesis, $H_0$**).
+
+* **Decision Rules:** Reject $H_0$ when $|\text{test statistic}| \ge \text{critical value}$ or when $\text{p-value} \le \alpha$ (significance level). Tests are **two-tailed** ($H_A: \neq$) for any change, or **one-tailed** ($H_A: >$ or $<$) for directional increases/decreases.
+* **Decision Errors:** A **Type I Error ($\alpha$)** is a false positive (rejecting a true $H_0$), whereas a **Type II Error ($\beta$)** is a false negative (failing to reject a false $H_0$).
+
+| Test Type | Use Case | Google Sheets Implementation |
+| :--- | :--- | :--- |
+| **Z-Test** *(Parametric)* | Large samples ($n \ge 30$) with known population standard deviation ($\sigma$). | `=Z.TEST(data, value, [standard_deviation])` |
+| **T-Test** *(Parametric)* | Small samples ($n < 30$) or unknown population standard deviation. | `=T.TEST(range1, range2, tails, type)` |
+| **Kolmogorov-Smirnov (KS)** *(Non-Parametric)* | Tests whether a sample follows a specified distribution (e.g., normal) without distribution assumptions using $D = \max(|F(Y_i) - \frac{i-1}{n}|, |\frac{i}{n} - F(Y_i)|)$. | Constructed manually via `SORT`, `RANK`, `NORM.DIST`, and `MAX` |
