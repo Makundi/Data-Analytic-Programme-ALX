@@ -207,3 +207,53 @@ The **Normal (Gaussian) Distribution** is a symmetric, bell-curved continuous pr
 * **Sampling Trade-Offs:** Balancing resource constraints against accuracy requirements when deciding on sample sizes for analysis.
 * **Distribution Matching:** Applying Probability Mass Functions (PMF) when counting discrete event occurrences and Probability Density Functions (PDF) when measuring continuous variables over ranges.
 * **Normal Curve Modeling:** Utilizing the mean ($\mu$) and variance ($\sigma^2$) parameters to model real-world continuous data distributions for predictive analysis.
+
+---
+
+## Part 2: Spreadsheet Functions
+
+This section covers essential text manipulation functions used to standardize, clean, search, and restructure string data within spreadsheets.
+
+---
+
+### 1. Text Editing & Cleaning Functions
+Used to modify string contents, strip unwanted spacing or non-printable characters, split delimited values, and combine strings:
+
+| Function | Purpose | Syntax | Example |
+| :--- | :--- | :--- | :--- |
+| **`SUBSTITUTE`** | Replaces a specific character or substring with another string. | `=SUBSTITUTE(text_to_search, search_for, replace_with, [occurrence_number])` | `=SUBSTITUTE("Google", "ogle", "od")` $\rightarrow$ `"Good"` |
+| **`TRIM`** | Removes leading, trailing, and repeated spaces from text. | `=TRIM(text)` | `=TRIM(" Hello,  World! ")` $\rightarrow$ `"Hello, World!"` |
+| **`CLEAN`** | Removes non-printable ASCII characters from a text string. | `=CLEAN(text)` | `=CLEAN("Hello\nWorld!")` $\rightarrow$ `"HelloWorld!"` |
+| **`SPLIT`** | Divides text around a specified delimiter into separate cells across a row. | `=SPLIT(text, delimiter, [split_by_each], [remove_empty_text])` | `=SPLIT("1,2,3", ",")` $\rightarrow$ `1` \| `2` \| `3` |
+| **`CONCATENATE`** | Appends multiple text strings together into a single string. | `=CONCATENATE(string1, [string2, ...])` | `=CONCATENATE("Hello", " ", "World!")` $\rightarrow$ `"Hello World!"` |
+
+---
+
+### 2. Text Case Standardization
+Used to enforce uniform capitalization across messy text entries:
+
+* **`UPPER`:** Converts all characters in a specified string to uppercase.
+  * *Syntax:* `=UPPER(text)`
+  * *Example:* `=UPPER("hello world")` $\rightarrow$ `"HELLO WORLD"`
+* **`LOWER`:** Converts all characters in a specified string to lowercase.
+  * *Syntax:* `=LOWER(text)`
+  * *Example:* `=LOWER("HELLO WORLD")` $\rightarrow$ `"hello world"`
+* **`PROPER`:** Capitalizes the first letter of each word in a specified string.
+  * *Syntax:* `=PROPER(text_to_capitalise)`
+  * *Example:* `=PROPER("hello WORLD")` $\rightarrow$ `"Hello World"`
+
+---
+
+### 3. Text Search & Position Lookup
+Used to locate the starting character index of a substring within a larger text string:
+
+| Function | Case Sensitivity | Syntax | Example |
+| :--- | :--- | :--- | :--- |
+| **`SEARCH`** | **Not** case-sensitive. | `=SEARCH(search_for, text_to_search, [starting_at])` | `=SEARCH("World", "Hello, World!")` $\rightarrow$ `8` |
+| **`FIND`** | **Case-sensitive** (returns `#VALUE!` if exact case is not matched). | `=FIND(search_for, text_to_search, [starting_at])` | `=FIND("World", "Hello, world!")` $\rightarrow$ `#VALUE!` |
+
+---
+
+### 4. Key Applied Takeaways
+* **Automated Text Hygiene:** Combining `TRIM` and `CLEAN` with case functions (`UPPER`, `LOWER`, `PROPER`) eliminates hidden whitespace, line breaks, and inconsistent casing that break lookup formulas and pivot tables.
+* **Case-Aware Parsing:** Knowing when to choose `SEARCH` for flexible, case-insensitive substring matching versus `FIND` when exact capitalization must be enforced.
