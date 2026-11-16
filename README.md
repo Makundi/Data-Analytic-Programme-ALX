@@ -285,7 +285,7 @@ A **residual** is the difference between an observed value and a predicted value
 
 | Error Metric | Description | Formula |
 | :--- | :--- | :--- |
-| **Mean Absolute Error (MAE)** | Average of the absolute residual values. | $MAE = \sum_{i=1}^{n} \frac{|y_i - x_i|}{n}$ |
+| **Mean Absolute Error (MAE)** | Average of the absolute residual values. | $MAE = \sum_{i=1}^{n} \frac{\lvert y_i - x_i \lvert}{n}$ |
 | **Mean Squared Error (MSE)** | Average of the squared residual values. | $MSE = \sum_{i=1}^{n} \frac{(y_i - x_i)^2}{n}$ |
 | **Root Mean Squared Error (RMSE)** | Square root of MSE, returning error to original units. | $RMSE = \sqrt{\sum_{i=1}^{n} \frac{(y_i - x_i)^2}{n}}$ |
 
@@ -303,4 +303,4 @@ Hypothesis testing evaluates whether sample findings reflect a true effect (**Al
 | :--- | :--- | :--- |
 | **Z-Test** *(Parametric)* | Large samples ($n \ge 30$) with known population standard deviation ($\sigma$). | `=Z.TEST(data, value, [standard_deviation])` |
 | **T-Test** *(Parametric)* | Small samples ($n < 30$) or unknown population standard deviation. | `=T.TEST(range1, range2, tails, type)` |
-| **Kolmogorov-Smirnov (KS)** *(Non-Parametric)* | Tests whether a sample follows a specified distribution (e.g., normal) without distribution assumptions using $D = \max(|F(Y_i) - \frac{i-1}{n}|, |\frac{i}{n} - F(Y_i)|)$. | Constructed manually via `SORT`, `RANK`, `NORM.DIST`, and `MAX` |
+| **Kolmogorov-Smirnov (KS)** *(Non-Parametric)* | Tests whether a sample follows a specified distribution (e.g., normal) without distribution assumptions using $D = \max(\lvert F(Y_i) - \frac{i-1}{n}\lvert, \lvert \frac{i}{n} - F(Y_i) \lvert)$. | Constructed manually via `SORT`, `RANK`, `NORM.DIST`, and `MAX` |
